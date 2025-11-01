@@ -29,7 +29,7 @@ def exemplo_dag_taskflow():
         return dados_transformados
 
     @task
-    def carregar_dados(dados_saida):
+    def carga_dados(dados_saida):
         """Carrega os dados transformados."""
         print(f"Executando a tarefa de carregamento com dados: {dados_saida}")
         print("Dados carregados com sucesso!")
@@ -37,7 +37,7 @@ def exemplo_dag_taskflow():
     # Definindo o fluxo de tarefas
     dados_extraidos = extrair_dados()
     dados_transformados = transformar_dados(dados_extraidos)
-    carregar_dados(dados_transformados)
+    carga_dados(dados_transformados)
 
 # Instanciando a DAG para que o Airflow possa descobri-la
 exemplo_dag_taskflow()
