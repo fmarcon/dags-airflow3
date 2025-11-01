@@ -1,13 +1,14 @@
 # dag_exemplo_3_1.py
 import pendulum
 from airflow.sdk import dag, task
+from config import TAGS
 
 @dag(
     dag_id="dag_dagbag001",
     start_date=pendulum.datetime(2025, 10, 23, tz="UTC"),
     schedule=None,
     catchup=False,
-    tags=["2025"]
+    tags=TAGS
 )
 def exemplo_dag_taskflow():
     """
