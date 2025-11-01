@@ -2,7 +2,6 @@
 import pendulum
 from airflow.sdk import dag, task
 
-
 @dag(
     dag_id="dag_dagbag001",
     start_date=pendulum.datetime(2025, 10, 23, tz="UTC"),
